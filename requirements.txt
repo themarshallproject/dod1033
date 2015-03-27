@@ -1,0 +1,6 @@
+numpy==1.9.2
+pandas==0.15.2
+pytz==2015.2
+six==1.9.0
+wsgiref==0.1.2
+xlrd
