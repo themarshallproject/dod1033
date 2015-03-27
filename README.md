@@ -4,7 +4,7 @@ For more than 20 years, the Pentagon program that distributes surplus weapons, a
 
 Then, events in Ferguson, Mo. propelled the 1033 program, as the surplus distribution is called, into the public eye. Flooded with calls for greater transparency, in late November, 2014, the Pentagon quietly released data that details the tactical equipment it tracks through the program, and for the first time identified the agencies that received items. The data is a national [gift list](https://www.themarshallproject.org/2014/12/05/a-department-of-defense-gift-guide-2014) of high-caliber weapons, armored vehicles, aircraft and similar military equipment, all delivered for the price of shipping and often with little civilian oversight.
 
-[The Marshall Project](https://www.themarshallproject.org/) and [MuckRock](http://www.muckrock.org/) worked together to produce [ stories](https://www.themarshallproject.org/2014/12/03/the-pentagon-finally-details-its-weapons-for-cops-giveaway) on the DoD's first release of agency-level data for tactical equipment.
+[The Marshall Project](https://www.themarshallproject.org/) and [MuckRock](https://www.muckrock.com/) worked together to produce [ stories](https://www.themarshallproject.org/2014/12/03/the-pentagon-finally-details-its-weapons-for-cops-giveaway) on the DoD's first release of agency-level data for tactical equipment.
 
 In this repository, you'll find the original Excel workbooks the Pentagon has released thus far, along with a script to combine a directory of Excel files into a csv for analysis.
 
