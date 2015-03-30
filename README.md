@@ -16,7 +16,7 @@ If you want to download everything from scratch, start here. Otherwise, jump to 
 
 In the ```data/dod_releases``` directory, you will find dated directories of the agency-level tactical data that the Pentagon has released.
 
-You must have [make](https://www.gnu.org/software/make/) and [virtualenv](https://virtualenv.pypa.io/en/latest/) installed on your machine.If you do, clone this repo from Github and then type two commands.
+You must have [make](https://www.gnu.org/software/make/), Python and [virtualenv](https://virtualenv.pypa.io/en/latest/) installed on your machine.If you do, clone this repo from Github and then type two commands.
 
 ```
 make download
