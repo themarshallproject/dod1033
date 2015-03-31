@@ -1,3 +1,17 @@
+```
+M               M    ________                            
+M M           M M   /_  __/ /  ___                       
+M M M       M M M    / / / _ \/ -_)                      
+M M M M   M M M M   /_/_/_//_/\__/         __        ____
+M M M M M M M M M     /  |/  /__ ________ / /  ___ _/ / /
+M M M M M M M M M    / /|_/ / _ `/ __(_-</ _ \/ _ `/ / / 
+M M M M M M M M M   /_/__/_/\_,_/_/ /___/_//_/\_,_/_/_/  
+M M M M M M M M M     / _ \_______    (_)__ ____/ /_     
+M M M M M M M M M    / ___/ __/ _ \  / / -_) __/ __/     
+M M M M M M M M M   /_/  /_/  \___/_/ /\__/\__/\__/     
+                                 |___/  
+```
+
 #The Pentagon's 1033 program data
 
 For more than 20 years, the Pentagon program that distributes surplus weapons, aircraft and vehicles to police departments nationwide received little attention or scrutiny. Defense Department officials closely guarded the details of which agencies across the country received which items.
