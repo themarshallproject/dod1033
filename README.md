@@ -30,7 +30,7 @@ If you want to download everything from scratch, start here. Otherwise, jump to 
 
 In the ```data/dod_releases``` directory, you will find dated directories of the agency-level tactical data that the Pentagon has released.
 
-You must have [make](https://www.gnu.org/software/make/), Python and [virtualenv](https://virtualenv.pypa.io/en/latest/) installed on your machine.If you do, clone this repo from Github and then type two commands.
+You must have [make](https://www.gnu.org/software/make/), Python and [virtualenv](https://virtualenv.pypa.io/en/latest/) installed on your machine. If you do, clone this repo from Github and then type two commands.
 
 ```
 make download
@@ -46,7 +46,7 @@ Our ```dodcombine.py``` script can combine spreadsheets in any of the directorie
 
 If you want to look at the older releases, use the -d flag and give it the directory where those csvs live, like this:
 
-```python dodcombine.py -d 'data/dod_releases/agencylev/nov212014'```
+```python dodcombine.py -d 'data/dod_releases/agencylev/2014-11-21'```
 
 By default, the script will create a file with today's date followed by ''-dod-snapshot.csv'. If you want to name your file something different, particularly if you're using one of the older releases, use the -o flag with the script.
 
