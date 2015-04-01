@@ -70,4 +70,4 @@ That said, the collected data releases in this repository could provide journali
 Tom Meagher, [The Marshall Project](https://www.themarshallproject.org/)
 
 ##Bugs
-If you have questions or see any problems with the data or the scripts, please file a Github issue, or email Tom at ```tmeagher@themarshallproject.org```
+If you have questions or see any problems with the data or the scripts, please file a [Github issue](https://github.com/themarshallproject/dod1033/issues), or email Tom at ```tmeagher@themarshallproject.org```
