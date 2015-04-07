@@ -25,8 +25,14 @@ Here, The Marshall Project is sharing the data we used in those stories, along w
 ##Data sources
 This data was downloaded from the website of the Department of Defense's Defense Logistics Agency's [Disposition Services](http://www.dispositionservices.dla.mil/EFOIA-Privacy/Pages/ereadingroom.aspx), which oversees the 1033 program distributions.
 
+In addition to helping you download the most current snapshot of the 1033 data, which updates roughly every quarter, we also include five snapshots of the data at varying levels of granularity.
+
+In the ```data/dodreleases``` directory, you'll find two subdirectories, ```countylev``` and ```agencylev```. In the first, you'll find two snapshots of the data with separate tabs for "General" equipment that went to specific agencies and "Tactical" equipment and the counties it went to (read more in this [great guide to 1033](https://github.com/SCPR/kpcc-data-team/blob/master/guides/primer-on-defense-logistics-agencys-1033-program-data.md) about the differences between those categories). 
+
+Starting in November, 2014, the Pentagon started releasing agency-level records for both types of equipment. That snapshot and two subsequent releases are in the ```agencylev``` directory. Each data snapshot is in a directory named for the date it was published on the web.
+
 ##Getting started
-If you want to download everything from scratch, start here. Otherwise, jump to the Walkthrough section below.
+If you want to download everything from scratch, start here. Otherwise, jump to the [Walkthrough section](https://github.com/themarshallproject/dod1033#walkthrough) below.
 
 In the ```data/dod_releases``` directory, you will find dated directories of the agency-level tactical data that the Pentagon has released.
 
@@ -39,10 +45,8 @@ make csv
 
 After a bunch of messages scroll across your screen as packages are installed and scripts run, you'll end up with a csv file that begins with today's date in the working directory.
 
-##Walkthrough
-In addition to helping you download the most current snapshot of the 1033 data, which updates roughly on a quarterly basis, we also include other releases at varying levels of granularity. In the ```data/dodreleases``` directory, you'll find two subdirectories, ```countylev``` and ```agencylev```. In the first, you'll find two snapshots of the data with separate tabs for "General" equipment that went to specific agencies and "Tactical" equipment and the counties it went to (read more in this [great guide to 1033](https://github.com/SCPR/kpcc-data-team/blob/master/guides/primer-on-defense-logistics-agencys-1033-program-data.md) about the differences between those categories). Starting in November, 2014, the Pentagon started releasing agency-level records for both types of equipment. That snapshot and subsequent releases are in the ```agencylev``` directory. Each data snapshot is in a directory named for the date it was released.
-
-Our ```dodcombine.py``` script can combine spreadsheets in any of the directories. The script's defaults will look to combine spreadsheets in the ```data/current``` directory (presumably downloaded from the website today). For instance, if you already have your own virtualenv with pandas installed and you've downloaded the spreadsheets from DoD into your ```data/current``` directory, you can run the script directly with ```python dodcombine.py```
+##Walkthrough our script
+Our ```dodcombine.py``` script can combine spreadsheets in any of the data directories. The script's defaults will look to combine spreadsheets in the ```data/current``` directory (presumably downloaded from the website today). For instance, if you already have your own virtualenv with pandas installed and you've downloaded the spreadsheets from DoD into your ```data/current``` directory, you can run the script directly with ```python dodcombine.py```
 
 If you want to look at the older releases, use the -d flag and give it the directory where those csvs live, like this:
 
