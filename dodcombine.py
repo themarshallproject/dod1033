@@ -23,23 +23,30 @@ def get_files(directory=None):
     return docslist
 
 def make_frame(docslist):
-    print "Creating latest DoD csv"
+    print("Creating a dataframe of DoD records")
     dodframe = pd.DataFrame()
     sheet_counter=0
+    file_counter = 0
 
     for file in docslist:
-        xlsn = pd.ExcelFile(file)
-        nsheets = xlsn.sheet_names
+        if file.endswith('xls') or file.endswith('xlsx'):
+            print("Scraping data from {0}".format(file))
+            xlsn = pd.ExcelFile(file)
+            nsheets = xlsn.sheet_names
 
-        for item in nsheets:
-            dodframe = pd.concat([dodframe, xlsn.parse(item, index_col=None)])
-            sheet_counter += 1
+            for item in nsheets:
+                dodframe = pd.concat([dodframe, xlsn.parse(item, index_col=None)])
+                sheet_counter += 1
+            file_counter += 1
+        else:
+            print("Skipping {0}".format(file))
 
     records = len(dodframe)
     states = sheet_counter
+    files = file_counter
 
-    print "Added %d states and territories to csv" % (states)
-    print "Total of %d records in csv" % (records)
+    print("Added {0} sheets for states and territories from {1} files to the dataframe".format(states, files))
+    print("Total of {0} records in dataframe".format(records))
     return dodframe
 
 def output_csv(dodframe, csv_name=None):
@@ -48,8 +55,8 @@ def output_csv(dodframe, csv_name=None):
     else:
         today = str(datetime.now().date())
         csv_name = today + "-dod-snapshot.csv"
-    dodframe.to_csv(csv_name)
-    print "Created %s file in this directory." % (csv_name)
+    dodframe.to_csv(csv_name, encoding="utf-8", index=False)
+    print("Created {0} file in this directory.".format(csv_name))
     return
 
 
