@@ -18,12 +18,12 @@ For more than 20 years, the Pentagon program that distributes surplus weapons, a
 
 Then, events in Ferguson, Mo. propelled the 1033 program, as the surplus distribution is called, into the public eye. Flooded with calls for greater transparency, in late November, 2014, the Pentagon quietly released data that details the tactical equipment it tracks through the program, and for the first time identified the agencies that received items. The data is a national [gift list](https://www.themarshallproject.org/2014/12/05/a-department-of-defense-gift-guide-2014) of high-caliber weapons, armored vehicles, aircraft and similar military equipment, all delivered for the price of shipping and often with little civilian oversight.
 
-[The Marshall Project](https://www.themarshallproject.org/) and [MuckRock](https://www.muckrock.com/) worked together to produce [ stories](https://www.themarshallproject.org/2014/12/03/the-pentagon-finally-details-its-weapons-for-cops-giveaway) on the DoD's first release of agency-level data for tactical equipment.
+[The Marshall Project](https://www.themarshallproject.org/) and [MuckRock](https://www.muckrock.com/) worked together to produce [stories](https://www.themarshallproject.org/2014/12/03/the-pentagon-finally-details-its-weapons-for-cops-giveaway) on the DoD's first release of agency-level data for tactical equipment.
 
 Here, The Marshall Project is sharing the data we used in those stories, along with several other snapshots of the data that the Pentagon has put out since the summer of 2014. In this repository, you'll find the original Excel workbooks from the DoD, along with a script to combine a directory of these Excel files into a csv for analysis.
 
 ##Data sources
-This data was downloaded from the website of the Department of Defense's Defense Logistics Agency's [Disposition Services](http://www.dispositionservices.dla.mil/EFOIA-Privacy/Pages/ereadingroom.aspx), which oversees the 1033 program distributions.
+This data was downloaded from the website of the Department of Defense's Defense Logistics Agency's [Disposition Services](http://www.dla.mil/DispositionServices/FOIA/EFOIALibrary.aspx), which oversees the 1033 program distributions.
 
 In addition to helping you download the most current snapshot of the 1033 data, which updates roughly every quarter, we also include five snapshots of the data at varying levels of granularity.
 
