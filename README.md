@@ -12,7 +12,7 @@ M M M M M M M M M   /_/  /_/  \___/_/ /\__/\__/\__/
                                  |___/  
 ```
 
-#The Pentagon's 1033 program data
+# The Pentagon's 1033 program data
 
 For more than 20 years, the Pentagon program that distributes surplus weapons, aircraft and vehicles to police departments nationwide received little attention or scrutiny. Defense Department officials closely guarded the details of which agencies across the country received which items.
 
@@ -22,16 +22,18 @@ Then, events in Ferguson, Mo. propelled the 1033 program, as the surplus distrib
 
 Here, The Marshall Project is sharing the data we used in those stories, along with several other snapshots of the data that the Pentagon has put out since the summer of 2014. In this repository, you'll find the original Excel workbooks from the DoD, along with a script to combine a directory of these Excel files into a csv for analysis.
 
-##Data sources
-This data was downloaded from the website of the Department of Defense's Defense Logistics Agency's [Disposition Services](http://www.dla.mil/DispositionServices/FOIA/EFOIALibrary.aspx), which oversees the 1033 program distributions.
+## Data sources
+This data was originally downloaded from the website of the Department of Defense's Defense Logistics Agency's [Disposition Services](http://www.dla.mil/DispositionServices/FOIA/EFOIALibrary.aspx), which oversees the 1033 program distributions.
 
-In addition to helping you download the most current snapshot of the 1033 data, which updates roughly every quarter, we also include five snapshots of the data at varying levels of granularity.
+In addition to helping you download [the most current snapshot of the 1033 data](https://www.dla.mil/DispositionServices/Offers/Reutilization/LawEnforcement/PublicInformation/), which updates roughly every quarter, we also include snapshots of the data at varying levels of granularity.
 
 In the ```data/dodreleases``` directory, you'll find two subdirectories, ```countylev``` and ```agencylev```. In the first, you'll find two snapshots of the data with separate tabs for "General" equipment that went to specific agencies and "Tactical" equipment and the counties it went to (read more in this [great guide to 1033](https://github.com/SCPR/kpcc-data-team/blob/master/guides/primer-on-defense-logistics-agencys-1033-program-data.md) about the differences between those categories). 
 
-Starting in November, 2014, the Pentagon started releasing agency-level records for both types of equipment. That snapshot and two subsequent releases are in the ```agencylev``` directory. Each data snapshot is in a directory named for the date it was published on the web.
+Starting in November, 2014, the Pentagon started releasing agency-level records for both types of equipment. That snapshot and two subsequent releases are in the ```agencylev``` directory. Each data snapshot is in a directory named for the date it was published on the web. We've been collecting these quarterly reports ever since.
 
-##Getting started
+## Getting started
+**WARNING, these scripts were used for our original story in 2014 and have not been updated since. If you want to take a crack at updating them, we do accept pull requests**
+
 If you want to download everything from scratch, start here. Otherwise, jump to the [Walkthrough section](https://github.com/themarshallproject/dod1033#walkthrough) below.
 
 In the ```data/dod_releases``` directory, you will find dated directories of the agency-level tactical data that the Pentagon has released.
@@ -45,7 +47,9 @@ make csv
 
 After a bunch of messages scroll across your screen as packages are installed and scripts run, you'll end up with a csv file that begins with today's date in the working directory.
 
-##Walkthrough our script
+## Walkthrough our script
+**WARNING, again these scripts were used for our original story in 2014 and have not been updated since. If you want to take a crack at updating them, we do accept pull requests**
+
 Our ```dodcombine.py``` script can combine spreadsheets in any of the data directories. The script's defaults will look to combine spreadsheets in the ```data/current``` directory (presumably downloaded from the website today). For instance, if you already have your own virtualenv with pandas installed and you've downloaded the spreadsheets from DoD into your ```data/current``` directory, you can run the script directly with ```python dodcombine.py```
 
 If you want to look at the older releases, use the -d flag and give it the directory where those csvs live, like this:
@@ -56,17 +60,17 @@ By default, the script will create a file with today's date followed by ''-dod-s
 
 ```python dodcombine.py -o 'november.csv'```
 
-##Working with the data and caveats
+## Working with the data and caveats
 Now that you have a handy csv of the 1033 release you prefer, you may want to do some analysis to see what your local police departments have received from the program.
 
 Before you do anything, you *must read* this [handy guide to the pitfalls of 1033 data](https://github.com/SCPR/kpcc-data-team/blob/master/guides/primer-on-defense-logistics-agencys-1033-program-data.md), by our friends at KPCC.
 
 This passage is especially important to keep in mind:
->The data released by the Defense Logistics Agency on Nov. 21 is current as of Nov. 13, 2014, but is not a historical record. With some caveats, it could be thought of as a snapshot of controlled items still in the possession of law enforcement agencies over the life of the program.
-
->For example, the data doesn't allow us to say whether the amount equipment acquired by an agency has increased over time. We can only say when the equipment that is currently at an agency arrived there.
-
->If a law enforcement agency returns, transfers or discards an item it simply no longer appears in data for that agency.
+> The data released by the Defense Logistics Agency on Nov. 21 is current as of Nov. 13, 2014, but is not a historical record. With some caveats, it could be thought of as a snapshot of controlled items still in the possession of law enforcement agencies over the life of the program.
+>
+> For example, the data doesn't allow us to say whether the amount equipment acquired by an agency has increased over time. We can only say when the equipment that is currently at an agency arrived there.
+>
+> If a law enforcement agency returns, transfers or discards an item it simply no longer appears in data for that agency.
 
 That said, the collected data releases in this repository could provide journalists and other researchers the means to analyze how weapons are distributed to individual police departments over time. We hope others will take up the challenge.
 
